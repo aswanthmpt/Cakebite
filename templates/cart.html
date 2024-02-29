@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    {% if cart %}
+    <div class=" mx-auto  p-2 " style=" width:90vw; height:auto">
+        <div class="row mx-2  ">
+            <div class="col-lg-6  p-2 " style="width: 58%;  overflow-x:hidden; overflow-y: scroll;height:60vh;">
+                {% for i in cart %}
+                <div style=" background-color: white; box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;" class="cartbox mt-2 p-2 d-flex">
+                <div class="cartimage  " style="width: 25%;" >
+                    <a href=""><img style="width: 100%;" src="{{i.products.image.url}}" alt=""> </a>
+                    
+                </div>
+                <div class="carttext ms-3">
+                    <h1 class="" style="font-size: 20px;">{{i.products.name}}</h1>
+                   
+                    <h3 style="font-size: 15px;"> &#x20B9 {{i.products.price}}</h3>
+                    <h3 style="font-size: 15px;">currentprice: &#x20B9 {{i.price}}</h3>
+                    <div class="d-flex my-3 ">
+                        <a href="{% url 'cart:remove' i.products.id %}"><button class="w3-button p-1 m-2  w3-white">-</button></a>
+                        <h3 class="p-1" style="font-size: 15px;border:1px black solid ; ">{{ i.quantity}}</h3>
+                        <a href="{% url 'cart:addcart' i.products.id %}"><button style="" class="w3-button p-1 m-2 w3-white">+</button></a>
+                    </div>
+                    
+                    <a href="{% url 'cart:delete' i.products.id %}"><button type="button" class=" my-2 shadow-sm btn btn-danger me-auto ">Remove</button></a>
+                </div>
+                
+            </div>
+            {% endfor %}
+
+
+          
+            <div class="container  p-3 mt-3">
+                <a href="">  <button type="button" class=" shadow-sm btn btn-warning me-auto ">PlaceOrder</button></a>
+            </div>
+            </div>
+            <div class="col-lg-6  ms-2" style="width: 40%;">
+                <div class=" mx-auto mt-5 p-3" style=" height:40vh; width: 70%; background-color:white; box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;">
+                    <h1 class="mx-auto" style="font-size: 20px;">Price details</h1>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                
+                                <td>total price</td>
+                                <td> &#x20B9 {{totalprice}}</td>
+                              </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="container " style="text-align: center;">
+        <div style="width: 100%;">
+            <img style="width: 50%;" src="{% static 'image/pngwing.com.png' %}" alt="">
+        </div>
+    </div>
+    {% endif %}
+</div>
+ 
+{% endblock %}

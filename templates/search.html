@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="mx-auto  my-5 container-fluid" style=" width:100%;">
+    <div class="mx-auto " style="width: 90%; background-color: white;">
+    <div class="row px-4 mx-2  justify-content-center  " >
+      {% for i in product %}
+      <div class="col-lg-3 mt-4">
+        <a style="text-decoration: none;color:black;" href="{% url 'main:details' i.id %}">
+          <div class="card " style="width: 100%; border:0px; ">
+              <img src="{{i.image.url}}" class="card-img-top" alt="..." style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;" >
+              <div class="card-body">
+                <p class="card-text">{{i.name}}</p>
+                <p class="card-text">{{i.price}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    
+ 
+
+  </div>
+
+
+{% endblock %}

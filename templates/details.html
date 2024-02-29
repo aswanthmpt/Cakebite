@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" style="width: 100%;">
+    <div class="  mx-auto  mt-3" style="width:80vw;  background-color:white">
+        <div class="row" style="width: 100%;">
+            <div class="col-lg-6 mx-2" style="width: 40%;">
+              <div class=" mt-2   ">
+                <img class="" style="width: 100%;" src="{{details.image.url}}" alt="">
+              </div>
+              <div class="d-flex justify-content-center mt-3">
+                <div class="d-flex me-3">
+                    <i class='fas fa-shield-alt' style='font-size:30px'></i>
+
+            <div class="ms-2">   
+               <h6 style="font-size: 13px;">100% Smile Guaranteed</h6>
+               <h6 style="font-size: 10px;">Unique Products On time delevery</h6>
+            </div>
+          </div>
+          <i class='fas fa-shield-alt me-2' style='font-size:20px'></i>
+                <h6 style="font-size: 13px;">100% safe and secure payments</h6>
+              </div>
+            </div>
+            <div class="mt-2 col-lg-6" style=" height:70vh; width:58%;  overflow-x: hidden;
+            overflow-y: auto;">
+            
+              <h3>{{details.name}}</h3>
+
+              <div class="d-flex mt-1">
+                <div class=" text-light bg-success me-2" style=" text-align:center;height:22px; width:40px; border-radius: 3px;">
+                  <h6 class="my-1 " style="font-size:13px;">4.5 <i class="fa fa-star"></i></h6>
+                </div>
+                <h6 >2828 Reviews</h6>
+              </div>
+              <div class="d-flex mt-1">
+                <h6 style="font-size: 17px;" > &#8377;</h6>
+              <h2>{{details.price}}</h2>
+            </div>
+            <h6>inclusive of all tax</h6>
+
+            {% if details.category.category_id == 1 %}
+
+              <h5 class="mt-3">Pick an Upgrade</h5>
+              <div class="d-flex mb-3">
+                <div class="me-3">
+                  <img style="width: 60px;" src="{{details.image.url}}" alt="">
+                <h6>1/2  Kg</h6>
+                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                </div>
+                <div class="me-3">
+                  <img style="width: 60px;" src="{{details.image.url}}" alt="">
+                <h6>1Kg</h6>
+                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                </div>
+                <div>
+                  <img style="width: 60px;" src="{{details.image.url}}" alt="">
+                <h6>2Kg</h6>
+                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                </div>
+           
+              </div>
+
+              {% elif details.category.category_id == 2 %}
+              <h5 class="mt-3">Pick an Upgrade</h5>
+              <div class="d-flex mb-3">
+                <div class="me-3">
+                  <img style="width: 60px;" src="{{details.image.url}}" alt="">
+                <h6>Design 1</h6>
+                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                </div>
+                <div class="me-3">
+                  <img style="width: 60px;" src="{{details.image.url}}" alt="">
+                <h6>Design 2</h6>
+                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                </div>
+                
+           
+              </div>
+            {% endif %}
+
+
+              <div class="d-flex justify-content-center">
+                <!-- HTML !-->
+                {% if user.is_authenticated %}
+              <button class="button-17 me-2 mt-3" role="button"><a href="{% url 'cart:addcart' details.id %}">Add to Cart <i class="fa fa-shopping-cart" style="font-size:24px"></i></a></button>
+              <button class="button-17 mt-3" role="button">Buy Now</button>
+              {% else %}
+              <button class="button-17 me-2 mt-3" role="button"><a href="{% url 'user:login'  %}">Add to Cart <i class="fa fa-shopping-cart" style="font-size:24px"></i></a></button>
+              <button class="button-17 mt-3" role="button">Buy Now</button>
+              {% endif %}
+            </div>
+
+            <h6 class="mt-4"><i class='fas fa-tag' style='font-size:15px'></i> Offers Available</h6>
+            <div class="d-flex mt-3"><img style="width: 10%;" src="{% static 'image/MobiKwik-Logo.png' %}" alt="">
+            <h6 class="ms-2" style="font-size: 13px;">Mobikwik - Get upto 15% cashback</h6>
+          </div>
+            <div class="d-flex mt-2"><img style="width: 10%;" src="{% static 'image/aritel-logo.png' %}" alt="">
+            <h6 class="ms-2" style="font-size: 13px;">Airtel Payments bank - Flat 10% off up to Rs.200</h6>
+          </div>
+
+          <h4 class="mt-3">Description</h4>
+          <h5>Product Details</h5>
+          {% if details.category.category_id == 1 %}
+          <ul>
+            <li>Cake flavour: {{details.flavour}}</li>
+            <li>Type of cake: {{details.type}}</li>
+            <li>Shape: {{details.shape}}</li>
+            <li>Weight: {{details.weight}} kg</li>
+          </ul>  
+          <h5>Delevery Information</h5>
+          <ul>
+            <li style="font-size: 12px;">
+              Every cake we offer is handcrafted and since each chef
+               has his/her own way of baking and designing a cake, there 
+               might be slight variation in the product in terms of design and shape</li>
+            <li style="font-size: 12px;">
+              The chosen delivery time is an estimate and depends on the availability of the product
+               and the destination to which you want the product to be delivered</li>
+            <li style="font-size: 12px;">
+              Since cakes are perishable in nature, we attempt delivery of your order only once.</li>
+            <li style="font-size: 12px;">
+              The delivery cannot be redirected to any other address.</li>
+            <li style="font-size: 12px;">
+              This product is hand delivered and will not be delivered along with courier products.</li>
+            <li style="font-size: 12px;">
+              Occasionally, substitutions of flavours/designs is necessary due to temporary 
+              and/or regional unavailability issues.</li>
+            
+          </ul>  
+          <h5>Care Instructions</h5>
+          <ul>
+            <li>Store cream cakes in a refrigerator</li>
+            <li>Fondant cakes should be stored in an air conditioned environment</li>
+            <li>Slice and serve the cake at room temperature and make sure it is not exposed to heat</li>
+            <li>Use a serrated knife to cut a fondant cake</li>
+            <li>Sculptural elements and figurines may contain wire supports or toothpicks or wooden skewers for support</li>
+            <li>Please check the placement of these items before serving to small children.</li>
+            <li>The cake should be consumed within 24 hours.</li>
+            <li>Enjoy your cake!</li>
+          </ul>
+          {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

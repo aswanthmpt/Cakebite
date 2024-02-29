@@ -1,0 +1,102 @@
+{% load static %}
+
+<nav class="topnav " >
+  <div class=" navone container-fluid  " >
+
+    
+    <a class=" icon " href="{% url 'main:product' %}">
+      <img  style="height: 5vh;  width: 90%;" src="{% static 'image/cake-bite-high-resolution-logo-transparent.png' %}" alt="">
+    </a>
+
+      <a class=" icon " href="{% url 'main:home' %}">
+        <img  style="  width: 100%;" src="{% static 'image/pngwing.com.png' %}" alt="">
+      </a>
+    
+      <div class="box ">
+      <form name="search" action="{% url 'search:search' %}" method="get">
+          <input type="text" class="input" name="q" onmouseout="this.value = ''; this.blur();">
+      </form>
+      <i class="fas fa-search"></i>
+  </div> 
+ 
+  <div class=" d-flex ms-auto  " style=" height: 6vh;" >
+    {% if user.is_authenticated %}
+    
+    
+    <p class="my-auto me-2" >{{user.username}}</p>
+    
+    <a class=" icon " href="">
+        <img  src="{% static 'image/user_icon_004.jpg' %}" alt="">
+        </a>
+     
+    
+    
+   
+      <a class=" icon " href="{% url 'cart:displaycart' %}">
+      <img style="width: 100%; " src="{% static 'image/cart.com.png' %}" alt="">
+      </a>
+   
+
+    
+
+      
+     
+        <a class=" icon " href="{% url 'user:logout' %}">
+          <img style="" src="{% static 'image/vector60-5847-01.jpg' %}" alt="">
+
+       
+          </i>
+          </a>
+          
+      {% else %}
+  
+    
+  <a class="icon " href="{% url 'user:login' %}">
+    <img style="" src="{% static 'image/vector60-5826-01.jpg' %}" alt="">
+
+      
+    </i>
+    </a>
+    
+
+    {% endif %}
+
+ 
+  </div>
+
+</div>
+</nav>
+  
+
+
+
+
+
+<nav  class="bottomnav   ">
+  <div class="container-fluid navtwo  ">
+    {% for i in category %}
+    <div class="  navcategory dropdown " >
+      <span class=" categoryname ">
+        <a href="">
+          
+          {{i.name}}
+        </a> 
+      </span>
+      <div class="dropdown-content subcategory  "  >
+        {% for j in subcategory %}
+          {% if i.id == j.category_id %}
+         <a href="{% url 'main:prod_by_cat' j.id %}">
+           
+           <p>{{j.name}}</p>
+         </a> 
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+    
+ 
+
+    </div>
+
+  </nav>
