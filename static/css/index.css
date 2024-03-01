@@ -39,7 +39,8 @@ body {
 
 .box input {
   /* padding: 10px; */
-  width: 38px;
+ 
+  width: 10%;
   height: 4vh;
   background: none;
   border: 2px solid #000000;
@@ -59,7 +60,7 @@ body {
 .box i{
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 5%;
   transform: translate(-50%,-50%);
   font-size: 20px;
   color: #000000;
@@ -76,6 +77,7 @@ body {
     background-color: #d3d1d1;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
 .navtwo{
   display: flex;
   justify-content: center;
@@ -97,9 +99,9 @@ body {
   text-align: center;
   width: 10vw;
 }
-.dropdown-content a {
+.navcategory a {
   color: black;
-  padding-top: 4px;
+  
   text-decoration: none;
   display: block;
 }
@@ -295,6 +297,227 @@ body {
 }
 
 /* Styles for screen sizes 1201px and more —  Extra large screens, TV */
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1201px) and (max-width: 1399px) {
   /* You can add specific styles for this screen size range here */
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  /* Your CSS styles for screens between 1400px and 1599px */
+  .topnav{
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(255, 255, 255);
+  
+  }
+  .navone {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  .icon {
+    padding: 1px;
+    margin-left: 7px;
+    margin-right: 6px;
+    margin-top: 10px;
+    
+  }
+  
+  
+  .icon img{
+    height: 4vh;
+  }
+  
+  
+  .box{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    align-self: center;
+  }
+  
+  .box input {
+    /* padding: 10px; */
+   
+    width: 8%;
+    height: 4vh;
+    background: none;
+    border: 2px solid #000000;
+    border-radius: 60px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: #000000;
+    outline: none;
+    transition: .5s;
+  }
+  .box:hover input{
+    width:100%;
+    background: #ffffff;
+    border-radius: 15px;
+  }
+  .box i{
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%,-50%);
+    font-size: 15px;
+    color: #000000;
+    transition: .2s;
+  }
+  .box:hover i{
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .bottomnav{
+    
+      height: 4vh;
+      background-color: #d3d1d1;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  
+  .navtwo{
+    display: flex;
+    justify-content: center;
+  
+  }
+  .navcategory {
+    margin-right: 5px;
+    height: 5vh;
+    margin-top: 7px;
+    margin-right: 2%;
+  }
+  
+  
+  .subcategory {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 10vw;
+  }
+  .navcategory a {
+    color: black;
+    
+    text-decoration: none;
+    display: block;
+  }
+  .navcategory:hover .dropdown-content {
+    
+    display: block;
+   
+  }
+}
+
+/* Category 3: Screens starting from 1600px and above */
+@media only screen and (min-width: 1600px) {
+  /* Your CSS styles for screens 1600px and wider */
+  .topnav{
+    height: 7vh;
+    background-color: rgb(255, 255, 255);
+  
+  }
+  .navone {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  .icon {
+    padding: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    
+  }
+  
+  
+  .icon img{
+    height: 4vh;
+  }
+  
+  
+  .box{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    align-self: center;
+  }
+  
+  .box input {
+    /* padding: 10px; */
+   
+    width: 10%;
+    height: 4vh;
+    background: none;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: #000000;
+    outline: none;
+    transition: .5s;
+  }
+  .box:hover input{
+    width:100%;
+    background: #ffffff;
+    border-radius: 10px;
+  }
+  .box i{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    color: #000000;
+    transition: .2s;
+  }
+  .box:hover i{
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .bottomnav{
+    
+      height: 4vh;
+      background-color: #d3d1d1;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  
+  .navtwo{
+    display: flex;
+    justify-content: center;
+  
+  }
+  .navcategory {
+    margin-right: 5px;
+    height: 5vh;
+    margin-top: 7px;
+    margin-right: 2%;
+  }
+  
+  
+  .subcategory {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 10vw;
+  }
+  .navcategory a {
+    color: black;
+    
+    text-decoration: none;
+    display: block;
+  }
+  .navcategory:hover .dropdown-content {
+    
+    display: block;
+   
+  }
+  
 }

@@ -4,15 +4,26 @@
 <div class="container-fluid carousel   p-0">
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner ">
+          {% for i in ads %}
           <div class="carousel-item active" data-bs-interval="3000">
-            <img src="{% static 'image/Personalised-banner_Desktop-Banner.webp' %}" class="d-block w-100" alt="...">
+            <img src="{{ i.banner.url }}" class="d-block w-100" alt="ygygy">
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'image/Anniversary-banner_Desk_16jan.webp' %}" class="d-block w-100" alt="...">
+            <img src="{{ i.banner_2.url }}" class="d-block w-100" alt=".fg..">
           </div>
           <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'image/Home-&-Living_Desktop.jpg' %}" class="d-block w-100" alt="...">
+            <img src="{{ i.banner_3.url }}" class="d-block w-100" alt=".fghg..">
           </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="{{ i.banner_4.url }}" class="d-block w-100" alt=".fgh..">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="{{ i.banner_5.url }}" class="d-block w-100" alt=".fghfgh..">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="{{ i.banner_6.url }}" class="d-block w-100" alt="..fghfghfhfgh.">
+          </div>
+          {% endfor %}
         </div>
         <div>
          
@@ -86,38 +97,62 @@
         </div>
 
         <div class="row  mt-3 m-2  ">
+          {% for i in subcategory %}
+          {% if  i.id == 24 %}
             <div class="col-lg-3 ">
+              <a href="{% url 'main:prod_by_cat' i.id %}">
                 <div class="card " style="width: 100%; border:0px;">
-                    <img src="{% static 'image/SBB-Desk_Chocolates.webp' %}" class="card-img-top" alt="...">
+                    <img src="{{ i.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">{{i.desc}}</p>
                     </div>
                   </div>
+                </a>
             </div>
-            <div class="col-lg-3">
+            {% endif %}
+            {% endfor %}
+            {% for i in subcategory %}
+          {% if  i.id == 19 %}
+            <div class="col-lg-3 ">
+              <a href="{% url 'main:prod_by_cat' i.id %}">
                 <div class="card " style="width: 100%; border:0px;">
-                    <img src="{% static 'image/SBB-Desk_Chocolates.webp' %}" class="card-img-top" alt="...">
+                    <img src="{{ i.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">{{i.desc}}</p>
                     </div>
                   </div>
+              </a>
             </div>
-            <div class="col-lg-3">
+            {% endif %}
+            {% endfor %}
+            {% for i in subcategory %}
+            {% if  i.id == 14 %}
+              <div class="col-lg-3 ">
+                <a href="{% url 'main:prod_by_cat' i.id %}">
+                  <div class="card " style="width: 100%; border:0px;">
+                      <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <p class="card-text">{{i.desc}}</p>
+                      </div>
+                    </div>
+                  </a>
+              </div>
+              {% endif %}
+              {% endfor %}
+          {% for i in subcategory %}
+          {% if  i.id == 16 %}
+            <div class="col-lg-3 ">
+              <a href="{% url 'main:prod_by_cat' i.id %}">
                 <div class="card " style="width: 100%; border:0px;">
-                    <img src="{% static 'image/SBB-Desk_Chocolates.webp' %}" class="card-img-top" alt="...">
+                    <img src="{{ i.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <p class="card-text">{{i.desc}}</p>
                     </div>
                   </div>
+                </a>
             </div>
-            <div class="col-lg-3">
-                <div class="card " style="width: 100%; border:0px;">
-                    <img src="{% static 'image/SBB-Desk_Chocolates.webp' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-            </div>
+            {% endif %}
+            {% endfor %}
         </div>
 
 

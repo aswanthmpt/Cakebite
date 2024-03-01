@@ -1,10 +1,11 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from . models import Category,Product,Subcategory
+from . models import Category,Product,Subcategory,Ads
 from django.core.paginator import Paginator,EmptyPage,InvalidPage
 # Create your views here.
 def home(req):
+    ads=Ads.objects.all()
  
-    return render(req,'index.html')
+    return render(req,'index.html',{"ads":ads})
 
 def product(req,id=None,):
     c_page=None

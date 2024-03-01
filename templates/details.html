@@ -46,17 +46,17 @@
                 <div class="me-3">
                   <img style="width: 60px;" src="{{details.image.url}}" alt="">
                 <h6>1/2  Kg</h6>
-                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                  <h6 style="font-size: 17px;" > &#8377; {{details.price}}</h6>
                 </div>
                 <div class="me-3">
                   <img style="width: 60px;" src="{{details.image.url}}" alt="">
                 <h6>1Kg</h6>
-                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                  <h6 style="font-size: 17px;" > &#8377; {{details.price_1kg}}</h6>
                 </div>
                 <div>
                   <img style="width: 60px;" src="{{details.image.url}}" alt="">
                 <h6>2Kg</h6>
-                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                  <h6 style="font-size: 17px;" > &#8377; {{details.price_2kg}}</h6>
                 </div>
            
               </div>
@@ -66,15 +66,16 @@
               <div class="d-flex mb-3">
                 <div class="me-3">
                   <img style="width: 60px;" src="{{details.image.url}}" alt="">
-                <h6>Design 1</h6>
-                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                  <h6>Design 1</h6>
+                  <h6 style="font-size: 17px;" > &#8377; {{details.price}}</h6>
                 </div>
+                {% if details.design_2price > 1 %}
                 <div class="me-3">
                   <img style="width: 60px;" src="{{details.image.url}}" alt="">
                 <h6>Design 2</h6>
-                  <h6 style="font-size: 17px;" > &#8377; 300</h6>
+                  <h6 style="font-size: 17px;" > &#8377; {{details.design_2price}}</h6>
                 </div>
-                
+                {% endif %}
            
               </div>
             {% endif %}
@@ -138,6 +139,37 @@
             <li>Please check the placement of these items before serving to small children.</li>
             <li>The cake should be consumed within 24 hours.</li>
             <li>Enjoy your cake!</li>
+          </ul>
+
+          {% elif details.category.category_id == 2 %}
+          <h5>Delevery Information</h5>
+          <ul>
+            <li style="font-size: 12px;">
+              The image displayed is indicative in nature</li>
+            <li style="font-size: 12px;">
+              Actual product may vary in shape or design as per the availability.</li>
+            <li style="font-size: 12px;">
+              Flowers may be delivered in fully bloomed, semi-bloomed or bud stage.</li>
+            <li style="font-size: 12px;">
+              The chosen delivery time is an estimate and depends on the availability of the product 
+              and the destination to which you want the product to be delivered.</li>
+            <li style="font-size: 12px;">
+              Since flowers are perishable in nature, we will be able to attempt delivery of your order only once.</li>
+            <li style="font-size: 12px;">
+              Occasionally, substitution of flowers is necessary due to temporary and/or regional unavailability issues.</li>
+            
+          </ul> 
+
+          <h5>Care Instructions</h5>
+          <ul>
+            <li>When your flowers arrive, just trim the stems and add water.</li>
+            <li>Re-cut 1-2â€� of the stems at a 45 degree angle.</li>
+            <li>Use a clean vase and clean water.</li>
+            <li>Remove the leaves below the waterline but do not remove all leaves along the stem length.</li>
+            <li>Check the water level daily and replenish as needed.</li>
+            <li>Don't place flowers in direct sunlight or near any other source of excessive heat.</li>
+            <li>All flowers benefit from a daily mist of water.</li>
+            <li>Enjoy your flowers!</li>
           </ul>
           {% endif %}
 

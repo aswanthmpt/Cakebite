@@ -1,6 +1,25 @@
 from django.db import models
 
 # Create your models here.
+class Ads(models.Model):
+    name=models.CharField(max_length=200,unique=True)
+    banner=models.ImageField(upload_to='ads',blank=True)
+    banner_2=models.ImageField(upload_to='ads',blank=True)
+    banner_3=models.ImageField(upload_to='ads',blank=True)
+    banner_4=models.ImageField(upload_to='ads',blank=True)
+    banner_5=models.ImageField(upload_to='ads',blank=True)
+    banner_6=models.ImageField(upload_to='ads',blank=True)
+    desc=models.TextField(blank=True)
+    desc_2=models.TextField(blank=True)
+    desc_3=models.TextField(blank=True)
+    desc_4=models.TextField(blank=True)
+    class Meta:
+        ordering=('name',)
+        verbose_name='Ads'
+        verbose_name_plural='Ads'
+    def __str__(self) :
+        return self.name
+    
 class Category(models.Model):
     name=models.CharField(max_length=200,unique=True)
     slug=models.SlugField(max_length=200,unique=True)
@@ -46,8 +65,12 @@ class Product(models.Model):
     image_2=models.ImageField(upload_to='products',blank=True)
     image_3=models.ImageField(upload_to='products',blank=True)
     image_4=models.ImageField(upload_to='products',blank=True)
+    design_2image=models.ImageField(upload_to='products',blank=True)
     desc=models.TextField(blank=True)
     price=models.DecimalField(max_digits=10,decimal_places=2)
+    price_1kg=models.DecimalField(max_digits=10,decimal_places=2,blank=True)
+    price_2kg=models.DecimalField(max_digits=10,decimal_places=2,blank=True)
+    design_2price=models.DecimalField(max_digits=10,decimal_places=2,blank=True)
     stock=models.IntegerField()
     flavour=models.CharField(max_length=250,blank=True)
     type=models.CharField(max_length=250,blank=True)
