@@ -80,12 +80,13 @@
 .subcategory {
   display: none;
   position: absolute;
-  top: 90%;
+  top: 23px;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   text-align: center;
   width: 10vw;
   margin-top: 0%;
+  z-index: 9999; 
 }
 .navcategory a {
   color: black;
