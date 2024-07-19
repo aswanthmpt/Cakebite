@@ -1,0 +1,168 @@
+.topnav{
+    height: 7vh;
+    background-color: rgb(255, 255, 255);
+  
+  }
+  
+  .navone {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  .icon {
+    padding: 1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    
+  }
+  .icon img{
+    height: 5vh;
+    width: 40px;
+  }
+  .box{
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    align-self: center;
+    display: flex;
+  }
+  .box input {
+    /* padding: 10px; */
+   margin-left: 6%;
+    width: 90%;
+    height: 4vh;
+    background: none;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    font-size: 26px;
+    color: #000000;
+   
+
+  }
+  .box i{
+    position: absolute;
+    top: 20%;
+    left: 0%;
+   
+
+    font-size: 20px;
+    color: #000000;
+
+  }
+
+
+  .bottomnav{
+  
+    height: 4vh;
+    background-color: #d3d1d1;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.navtwo{
+  display: flex;
+  justify-content: center;
+
+}
+.navcategory {
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  margin-right: 5px;
+  height: 5vh;
+  margin-top: 7px;
+  margin-right: 2%;
+}
+
+
+.subcategory {
+  display: none;
+  position: absolute;
+  top: 90%;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 10vw;
+  margin-top: 0%;
+}
+.navcategory a {
+  color: black;
+  
+  text-decoration: none;
+  display: block;
+}
+.navcategory:hover .dropdown-content {
+  
+  display: block;
+ 
+}
+@media screen and (max-width: 480px) {
+    .box input {
+      /* padding: 10px; */
+     margin-left: 9%;
+      width: 50%;
+      font-size: 18px;
+
+    }
+    .subcategory {
+    width: 25vw;
+        right: auto;
+        margin-top: 0%;
+        margin-right: 2%;
+      }
+    }
+
+  
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+ 
+   .box input {
+    width: 50%;
+  margin-left: 10%;
+   }
+   .subcategory {
+    width: 25vw;
+   
+      }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .subcategory {
+      width: 25vw;
+     
+        }
+        .box input {
+          width: 50%;
+        margin-left: 10%;
+         }
+  }
+  
+  @media screen and (min-width: 1025px) and (max-width: 1200px) {
+ 
+    .subcategory {
+      width: 15vw;
+     
+        }
+  
+  }
+  
+ 
+  @media screen and (min-width: 1201px) and (max-width: 1399px) {
+ 
+ 
+   
+  }
+  
+  @media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  
+   
+  
+    
+  }
+ 
+  @media only screen and (min-width: 1600px) {
+
+  
+  
+
+  }

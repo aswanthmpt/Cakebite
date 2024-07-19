@@ -1,139 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
-body {
-   
-    background-color: #f2f2f2;
-}
-
-
-.topnav{
-  height: 7vh;
-  background-color: rgb(255, 255, 255);
-
-}
-.navone {
-  display: flex;
-  align-items: center;
-  padding: 2px;
-}
-.icon {
-  padding: 1px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  
-}
-
-
-.icon img{
-  height: 4vh;
-}
-
-
-.box{
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  align-self: center;
-}
-
-.box input {
-  /* padding: 10px; */
- 
-  width: 10%;
-  height: 4vh;
-  background: none;
-  border: 2px solid #000000;
-  border-radius: 50px;
-  box-sizing: border-box;
-  font-family: Comic Sans MS;
-  font-size: 26px;
-  color: #000000;
-  outline: none;
-  transition: .5s;
-}
-.box:hover input{
-  width:100%;
-  background: #ffffff;
-  border-radius: 10px;
-}
-.box i{
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translate(-50%,-50%);
-  font-size: 20px;
-  color: #000000;
-  transition: .2s;
-}
-.box:hover i{
-  opacity: 0;
-  z-index: -1;
-}
-
-.bottomnav{
-  
-    height: 4vh;
-    background-color: #d3d1d1;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.navtwo{
-  display: flex;
-  justify-content: center;
-
-}
-.navcategory {
-  margin-right: 5px;
-  height: 5vh;
-  margin-top: 7px;
-  margin-right: 2%;
-}
-
-
-.subcategory {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  text-align: center;
-  width: 10vw;
-}
-.navcategory a {
-  color: black;
-  
-  text-decoration: none;
-  display: block;
-}
-.navcategory:hover .dropdown-content {
-  
-  display: block;
- 
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .categorycards {
     width: 100%;
     height: 40vh;
     display: flex;
     justify-content: center;
-   
-   
-  }
+    flex-direction: row;
+ }
   .categorycards h6{
     font-size: 20px;
   }
 .scene{
+    
     text-align: center;
     width:12% ;
     height: 30vh;
- 
-  
 }
+.scene h6{
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
 
-
-
+}
 .fcard {
    
     width: 85%;
@@ -171,353 +59,581 @@ body {
   .card__face--back {
     transform: rotateY(0.5turn);
   }
-  .newarrival{
-    width: 70%;
-     background-color:white;
-  }
 
 
   .texthead{
+    
     text-align: center;
     height: 20vh;
-   
+   width: 60%;
+  
+   padding-top: 1%;
   }
   .texthead h2{
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
     font-size: 40px;
   }
   .texthead p{
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
     font-size: 20px;
   }
 
+.rosead{
+    padding:0%;
+ width: 100vw;
 
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-    text-align: left;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-
-
-  
-  .login input{
-    background-color: rgba(228, 225, 225, 0.397);
-    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
-    border: 0px solid rgb(0, 0, 0);
-  }
- .login ::placeholder{
-  color: #242424;
- }
-
-
-
-
-
-.button-17 {
-  align-items: center;
-  appearance: none;
-  background-color: #fff;
-  border-radius: 24px;
-  border-style: none;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-  box-sizing: border-box;
-  color: #3c4043;
-  /* cursor: pointer; */
-  display: inline-flex;
-  /* fill: currentcolor; */
-  /* font-family: "Google Sans",Roboto,Arial,sans-serif; */
-  font-size: 14px;
-  font-weight: 500;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: .25px;
-  line-height: normal;
-  max-width: 100%;
-  overflow: visible;
-  padding: 2px 24px;
-  position: relative;
-  text-align: center;
-  text-transform: none;
-  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: 40%;
-  will-change: transform,opacity;
-  /* z-index: 0; */
 }
-
-
-/* Styles for screen sizes 320px — 480px: Mobile devices */
-@media screen and (max-width: 480px) {
-  .topnav {
-    height: 10vh; /* Adjust height for mobile devices */
-  }
-  
-  .icon {
-    margin-top: 5px; /* Adjust margin for mobile devices */
-  }
-  
-  .box {
-    margin-top: 5px; /* Adjust margin for mobile devices */
-  }
-  
-  .box input {
-    font-size: 20px; /* Adjust font size for mobile devices */
-  }
+.roseadone{
+    width:90vw ; 
+    background-color: rgb(255, 255, 255);
 }
-
-/* Styles for screen sizes 481px — 768px: iPads, Tablets */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  /* You can add specific styles for this screen size range here */
+.cakeimg{
+    width: 100vw; ;
+     position:relative;
 }
-
-/* Styles for screen sizes 769px — 1024px: Small screens, laptops */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* You can add specific styles for this screen size range here */
-}
-
-/* Styles for screen sizes 1025px — 1200px: Desktops, large screens */
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-  /* You can add specific styles for this screen size range here */
-}
-
-/* Styles for screen sizes 1201px and more —  Extra large screens, TV */
-@media screen and (min-width: 1201px) and (max-width: 1399px) {
-  /* You can add specific styles for this screen size range here */
-}
-
-@media only screen and (min-width: 1400px) and (max-width: 1599px) {
-  /* Your CSS styles for screens between 1400px and 1599px */
-  .topnav{
+.cakeimg img{
     width: 100%;
-    height: 7vh;
-    background-color: rgb(255, 255, 255);
-  
-  }
-  .navone {
-    display: flex;
-    align-items: center;
-    padding: 2px;
-  }
-  .icon {
-    padding: 1px;
-    margin-left: 7px;
-    margin-right: 6px;
-    margin-top: 10px;
-    
-  }
-  
-  
-  .icon img{
-    height: 4vh;
-  }
-  
-  
-  .box{
-    position: relative;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    align-self: center;
-  }
-  
-  .box input {
-    /* padding: 10px; */
+     filter: brightness(80%);
+}
+.cakeimgdiv{
+    position: absolute;
+    top:19%; 
+    left:10%;
+}
+.cakeimgh1o{
+    font-size:100px;color:rgb(255, 255, 255); text-shadow: 2px 2px 14px  rgba(0, 0, 0, 0.8);
+}
+.cakeimgh1t{
+    font-size:70px;color:white;text-shadow: 2px 2px 14px  rgba(0, 0, 0, 0.8);
+}
+.cakeimgh1th{
+    font-size:50px;color:white;text-shadow: 2px 2px 14px  rgba(0, 0, 0, 0.8);
+}
+.cakeimgpo{
+    color:white;text-shadow: 2px 2px 14px  rgba(0, 0, 0, 0.8);
+}
+.cakeimgpt{
+    color:white;text-shadow: 2px 2px 14px  rgba(0, 0, 0, 0.8);
+}
+.lcategr{
+    width: 100%;
+}
+.lcategrd{
+    width:80vw; 
    
-    width: 8%;
-    height: 4vh;
-    background: none;
-    border: 2px solid #000000;
-    border-radius: 60px;
-    box-sizing: border-box;
-    font-family: Comic Sans MS;
-    font-size: 26px;
-    color: #000000;
-    outline: none;
-    transition: .5s;
-  }
-  .box:hover input{
-    width:100%;
-    background: #ffffff;
-    border-radius: 15px;
-  }
-  .box i{
-    position: absolute;
-    top: 50%;
-    left: 4%;
-    transform: translate(-50%,-50%);
-    font-size: 15px;
-    color: #000000;
-    transition: .2s;
-  }
-  .box:hover i{
-    opacity: 0;
-    z-index: -1;
-  }
+}
+.lrow{
   
-  .bottomnav{
-    
-      height: 4vh;
-      background-color: #d3d1d1;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
-  
-  .navtwo{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+}
+.lrowcard{
   
-  }
-  .navcategory {
-    margin-right: 5px;
-    height: 5vh;
-    margin-top: 7px;
-    margin-right: 2%;
-  }
-  
-  
-  .subcategory {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 10vw;
-  }
-  .navcategory a {
-    color: black;
-    
+    width: 18%;
+}
+.lrowcard a{
     text-decoration: none;
-    display: block;
-  }
-  .navcategory:hover .dropdown-content {
-    
-    display: block;
+}
+.lrowcard a:hover{
+  color: black;
+}
+.lrowcard .card{
+    width: 100%; border:0px;
+}
+.lrowcard .card p{
+    font-size: 15px;
+}
+.limgl{
+    width: 100%;position:relative ;
+}
+.limgld{
+    position: absolute;
+    top:40%; left:28%;
+     color:aliceblue;
+     text-shadow: 2px 2px 14px #020000; 
+  
+}
+.limgld h1{
+    font-size: 50px;
+}
+.footsec{
+    /* display: flex; */
+    width: 100%;
+}
+.footsecd{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white; width: 80%;
+}
+.footsecd .foot{
+    width: 15%;
+}
+.footsecd .foot h4{
+    font-size: 15px;
+}
+.footsecd .foot h5{
+    font-size: 12px;
+}
+.footsecd .footw{
+    width: 18%;
+     color:rgb(148, 147, 147);
+
+}
+.footsecd .footw h4{
    
-  }
+     font-size: 15px;
+}
+.sicon{
+    color:white;
+      background-color: rgb(16, 16, 16);
+       width:100% ; 
+       display: flex;
+       flex-wrap: wrap;
+}
+.sicono{
+    width: 30%;
+}
+.sicono h4{
+    font-size:12px;
+}
+.sicont{
+    display: flex;
+    width: 30%;
+}
+.sicont h4{
+    font-size:12px;
+}
+.sicont img{
+    width: 30px ;
+   
+}
+.siconth{
+    display: flex;
+    width: 30%;
+}
+.siconth img{
+  
+    width: 25px; 
+    height:35px;
 }
 
-/* Category 3: Screens starting from 1600px and above */
-@media only screen and (min-width: 1600px) {
-  /* Your CSS styles for screens 1600px and wider */
-  .topnav{
-    height: 7vh;
-    background-color: rgb(255, 255, 255);
-  
-  }
-  .navone {
-    display: flex;
-    align-items: center;
-    padding: 2px;
-  }
-  .icon {
-    padding: 1px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    
-  }
-  
-  
-  .icon img{
-    height: 4vh;
-  }
-  
-  
-  .box{
-    position: relative;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    align-self: center;
-  }
-  
-  .box input {
-    /* padding: 10px; */
+  @media screen and (max-width: 480px) {
+    .sicono{
+        width: 30%;
+    }
+    .sicono h4{
+        font-size:8px;
+    }
+    .sicont{
+        width: 30%;
+    }
+    .sicont img{
+        width: 15px ;
+        height: 30px;
+        margin-top: 5%;
+    }
+    .sicont h4{
+        font-size:8px;
+    }
+    .siconth{
+        width: 30%;
+    }
+    .siconth img{
+        margin-top: 5%;
+        width: 15px; 
+        height:25px;
+    }
+    .footsecd .foot{
+        width: 20%;
+    }
+    .footsecd .foot h4{
+        font-size: 10px;
+    }
+    .footsecd .foot h5{
+        font-size: 8px;
+    }
+    .footsecd .footw{
+        width: 50%;
    
-    width: 10%;
-    height: 4vh;
-    background: none;
-    border: 2px solid #000000;
-    border-radius: 50px;
-    box-sizing: border-box;
-    font-family: Comic Sans MS;
-    font-size: 26px;
-    color: #000000;
-    outline: none;
-    transition: .5s;
-  }
-  .box:hover input{
-    width:100%;
-    background: #ffffff;
-    border-radius: 10px;
-  }
-  .box i{
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(-50%,-50%);
-    font-size: 18px;
-    color: #000000;
-    transition: .2s;
-  }
-  .box:hover i{
-    opacity: 0;
-    z-index: -1;
-  }
-  
-  .bottomnav{
+    }
+    .footsecd .footw h4{
+       
+         font-size: 12px;
+    }
     
-      height: 4vh;
-      background-color: #d3d1d1;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  }
+    .limgld h1{
+        font-size: 100%;
+    }
+    .lrowcard{
   
-  .navtwo{
-    display: flex;
-    justify-content: center;
-  
-  }
-  .navcategory {
-    margin-right: 5px;
-    height: 5vh;
-    margin-top: 7px;
-    margin-right: 2%;
-  }
-  
-  
-  .subcategory {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 10vw;
-  }
-  .navcategory a {
-    color: black;
+        width: 48%;
+        margin-right: 5px;
+    }
+    .lrowcard .card p{
+        font-size: 70%;
+    }
+    .categorycards {
+   
+        height: 20vh;
+ 
+     }
+    .categorycards h6{
+        font-size: 12px;
+      }
+      .fcard {
+   
+        width: 100%;
+        height: 30%;
+        border-radius: 10px;
+    }
+    .fcard img  {
+        border-radius: 10px;
+      }
+      .texthead{
     
-    text-decoration: none;
-    display: block;
+        text-align: center;
+        width: 80%;
+        height: 15vh;
+      
+       
+      }
+      .texthead h2{
+        font-family: "Kanit", sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+        margin-top: 0%;
+      }
+      .texthead p{
+        font-family: "Kanit", sans-serif;
+        font-weight: 400;
+        font-size: 10px;
+      }
+      .roseadrowt{
+      
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .roseadrowtc{
+        margin-top: 10px;
+        width: 50%;
+              height: auto;
+        
+      }
+      .cakeimgdiv{
+        position: absolute;
+        top:4%; 
+        left:5%;
+    }
+      .cakeimgh1o{
+        font-size:100%;
+    }
+    .cakeimgh1t{
+        font-size:100%;
+    }
+    .cakeimgh1th{
+        font-size:100%;
+    }
+    .cakeimgpo{
+        font-size: 50%;
+    }
+    .cakeimgpt{
+       font-size: 50%;
+    }
+
   }
-  .navcategory:hover .dropdown-content {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .sicono{
+        width: 30%;
+    }
+    .sicono h4{
+        font-size:8px;
+    }
+    .sicont{
+        width: 30%;
+    }
+    .sicont img{
+        width: 18px ;
+        height: 33px;
+        margin-top: 5%;
+    }
+    .sicont h4{
+        font-size:8px;
+    }
+    .siconth{
+        width: 30%;
+    }
+    .siconth img{
+        margin-top: 5%;
+        width: 18px; 
+        height:28px;
+    }
+    .footsecd .foot{
+        width: 20%;
+    }
+    .footsecd .foot h4{
+        font-size: 12px;
+    }
+    .footsecd .foot h5{
+        font-size: 10px;
+    }
+    .footsecd .footw{
+        width: 50%;
+   
+    }
+    .footsecd .footw h4{
+       
+         font-size: 12px;
+    }
+    .categorycards h6{
+        font-size: 15px;
+      }
+      .limgld h1{
+        font-size: 100%;
+    }
+      .categorycards {
+   
+        height: 25vh;
+
+     }
+      .fcard {
+   
+        width: 100%;
+        height: 40%;
+        border-radius: 1px;
+    }
+    .fcard img  {
+        border-radius: 10px;
+      }
+      .texthead{
     
-    display: block;
+        text-align: center;
+        width: 80%;
+        height: 15vh;
+       
+      
+       
+      }
+      .texthead h2{
+        font-family: "Kanit", sans-serif;
+        font-weight: 400;
+        font-size: 28px;
+        margin-top: 0%;
+      }
+      .texthead p{
+        font-family: "Kanit", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+      }
+      .roseadrowt{
+      
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .roseadrowtc{
+        margin-top: 10px;
+        width: 50%;
+        height: auto;
+      }
+      .cakeimgh1o{
+        font-size:50px;
+    }
+    .cakeimgh1t{
+        font-size:38px;
+    }
+    .cakeimgh1th{
+        font-size:28px;
+    }
+    .cakeimgpo{
+        font-size: 10px;
+    }
+    .cakeimgpt{
+       font-size: 10px;
+    }
+    .lrowcard{
+  
+        width: 48%;
+        margin-right: 5px;
+    }
+    .lrowcard .card p{
+        font-size: 10px;
+    }
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .footsecd .foot{
+        width: 15%;
+    }
+    .footsecd .foot h4{
+        font-size: 15px;
+    }
+    .footsecd .foot h5{
+        font-size: 12px;
+    }
+    .footsecd .footw{
+        width: 50%;
+   
+    }
+    .footsecd .footw h4{
+       
+         font-size: 15px;
+    }
+    .lrowcard{
+  
+        width: 48%;
+        margin-right: 5px;
+    }
+    .limgld h1{
+        font-size: 30px;
+    }
+    .lrowcard .card p{
+        font-size: 12px;
+    }
+    .categorycards h6{
+        font-size: 20px;
+      }
+    
+      .fcard {
+   
+        width: 100%;
+        height: 70%;
+        border-radius: 10px;
+    }
+    .fcard img  {
+        border-radius: 10px;
+      }
+      .texthead{
+    
+        
+        height: 15vh;
+       
+      
+       
+      }
+      .texthead h2{
+      
+        font-size: 32px;
+        margin-top: 0%;
+      }
+      .texthead p{
+     
+        font-size: 15px;
+      }
+
+  }
+  
+  @media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .footsecd .foot{
+        width: 15%;
+    }
+    .footsecd .foot h4{
+        font-size: 15px;
+    }
+    .footsecd .foot h5{
+        font-size: 12px;
+    }
+    .footsecd .footw{
+        width: 15%;
+   
+    }
+    .footsecd .footw h4{
+       
+         font-size: 12px;
+    }
+
+    .limgld h1{
+        font-size: 40px;
+    }
+      .fcard {
+   
+        width: 100%;
+        height: 80%;
+        border-radius: 30px;
+    }
+    .fcard img  {
+        border-radius: 30px;
+      }
+      .texthead{
+    
+        
+        height: 15vh;
+      
+      
+       
+      }
+      .texthead h2{
+      
+        font-size: 35px;
+        margin-top: 0%;
+      }
+      .texthead p{
+     
+        font-size: 20px;
+      }
+
+  
+  }
+  
+ 
+  @media screen and (min-width: 1201px) and (max-width: 1399px) {
+    .footsecd .foot{
+        width: 12%;
+    }
+    .footsecd .foot h4{
+        font-size: 15px;
+    }
+    .footsecd .foot h5{
+        font-size: 12px;
+    }
+    .footsecd .footw{
+        width: 17%;
+   
+    }
+    .footsecd .footw h4{
+       
+         font-size: 12px;
+    }
+ 
+    .fcard {
+   
+        width: 100%;
+        height: 80%;
+        border-radius: 30px;
+    }
+    .fcard img  {
+        border-radius: 30px;
+      }
    
   }
   
-}
+  @media only screen and (min-width: 1400px) and (max-width: 1599px) {
+    .footsecd .foot{
+        width: 15%;
+    }
+    .footsecd .foot h4{
+        font-size: 15px;
+    }
+    .footsecd .foot h5{
+        font-size: 12px;
+    }
+    .footsecd .footw{
+        width: 15%;
+   
+    }
+    .footsecd .footw h4{
+       
+         font-size: 12px;
+    }
+  
+   
+  
+    
+  }
+ 
+  @media only screen and (min-width: 1600px) {
+
+  
+  
+
+  }

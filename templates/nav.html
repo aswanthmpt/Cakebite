@@ -4,19 +4,17 @@
   <div class=" navone container-fluid  " >
 
     
-    <a class=" icon " href="{% url 'main:product' %}">
-      <img  style="height: 5vh;  width: 90%;" src="{% static 'image/cake-bite-high-resolution-logo-transparent.png' %}" alt="">
+    <a class=" icon " href="{% url 'main:home' %}">
+      <img  style="height: 5vh;  width: 100%;" src="{% static 'image/cake-bite-high-resolution-logo-transparent.png' %}" alt="">
     </a>
 
-      <a class=" icon " href="{% url 'main:home' %}">
-        <img  style="  width: 100%;" src="{% static 'image/pngwing.com.png' %}" alt="">
-      </a>
+   
     
       <div class="box ">
+        <i class="fas fa-search"></i>
       <form name="search" action="{% url 'search:search' %}" method="get">
-          <input type="text" class="input" name="q" onmouseout="this.value = ''; this.blur();">
+          <input type="text" class="input" name="q" >
       </form>
-      <i class="fas fa-search"></i>
   </div> 
  
   <div class=" d-flex ms-auto  " style=" height: 6vh;" >
@@ -33,7 +31,7 @@
     
    
       <a class=" icon " href="{% url 'cart:displaycart' %}">
-      <img style="width: 100%; " src="{% static 'image/cart.com.png' %}" alt="">
+      <img style=" " src="{% static 'image/cart.com.png' %}" alt="">
       </a>
    
 
@@ -66,18 +64,31 @@
 
 </div>
 </nav>
-  
-
-
-
 
 
 <nav  class="bottomnav   ">
   <div class="container-fluid navtwo  ">
-    {% for i in category %}
     <div class="  navcategory dropdown " >
       <span class=" categoryname ">
         <a href="">
+          
+          OUR PRODUCTS
+        </a> 
+      </span>
+      <div class="dropdown-content subcategory  "  >
+       
+         <a href="{% url 'main:product' %}">
+           
+           <p>ALL PRODUCTS</p>
+         </a> 
+       
+      </div>
+    </div>
+    
+    {% for i in category %}
+    <div class="  navcategory dropdown " >
+      <span class=" categoryname ">
+        <a href="{% url 'main:prod_by_mcat' i.id %}">
           
           {{i.name}}
         </a> 

@@ -5,6 +5,7 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner ">
           {% for i in ads %}
+          {% if i.id == 1 %}
           <div class="carousel-item active" data-bs-interval="3000">
             <img src="{{ i.banner.url }}" class="d-block w-100" alt="ygygy">
           </div>
@@ -23,6 +24,7 @@
           <div class="carousel-item" data-bs-interval="3000">
             <img src="{{ i.banner_6.url }}" class="d-block w-100" alt="..fghfghfhfgh.">
           </div>
+          {% endif %}
           {% endfor %}
         </div>
         <div>
@@ -41,13 +43,12 @@
 
 </div>
 
-
 <div class="container-fluid categorycards ">
   
     {% for i in category %}
     <div class="scene m-2  w3-animate-zoom " style="animation-duration: 2s;">
         <h6>{{i.name}}</h6>
-        
+        <a href="{% url 'main:prod_by_mcat' i.id %}">
         <div class="fcard m-2 ">
           <div class="card__face card__face--front">
             <img src="{{ i.image.url }}" />
@@ -57,14 +58,11 @@
           </div>
          
         </div>
+        </a>
       </div>
       {% endfor %}
-
-  
-
-      
-
 </div>
+
 <div class="container-fluid d-flex justify-content-center  my-3 py-3" style="width: 100%;">
 
     <div class="container newarrival py-2" style="">
@@ -73,143 +71,147 @@
 
 </div>
 
-<div class="container-fluid texthead py-2  ">
-<div style="width: 60%;" class=" my-4 mx-auto ">
-    <h2>Making Every Celebration Sweeter.</h2>
-    <p>#All designs are meaningful, just like your life.</p>
-</div>
-    
-
-</div>
-
-
-<div class="container-fluid rosead p-0 " style=" padding:0%; width: 100vw">
-    <div class="mx-auto   my-3 p-2  " style=" width:90vw ; background-color: rgb(255, 255, 255);"  >
-        <div class="row mt-3 m-2 ">
-            <div class="col-lg-6 ">
-               
-                <img style="width: 100%;" src="{% static 'image/SBB-Hero_Desk_Rose.webp' %}" alt="">
-            </div>
-            <div class="col-lg-6 ">
-              
-                <img style="width: 100%;" src="{% static 'image/SBB-Hero_Desk_Plants.webp' %}" alt="">
-            </div>
-        </div>
-
-        <div class="row  mt-3 m-2  ">
-          {% for i in subcategory %}
-          {% if  i.id == 24 %}
-            <div class="col-lg-3 ">
-              <a href="{% url 'main:prod_by_cat' i.id %}">
-                <div class="card " style="width: 100%; border:0px;">
-                    <img src="{{ i.image.url }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">{{i.desc}}</p>
-                    </div>
-                  </div>
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-            {% for i in subcategory %}
-          {% if  i.id == 19 %}
-            <div class="col-lg-3 ">
-              <a href="{% url 'main:prod_by_cat' i.id %}">
-                <div class="card " style="width: 100%; border:0px;">
-                    <img src="{{ i.image.url }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">{{i.desc}}</p>
-                    </div>
-                  </div>
-              </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-            {% for i in subcategory %}
-            {% if  i.id == 14 %}
-              <div class="col-lg-3 ">
-                <a href="{% url 'main:prod_by_cat' i.id %}">
-                  <div class="card " style="width: 100%; border:0px;">
-                      <img src="{{ i.image.url }}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <p class="card-text">{{i.desc}}</p>
-                      </div>
-                    </div>
-                  </a>
-              </div>
-              {% endif %}
-              {% endfor %}
-          {% for i in subcategory %}
-          {% if  i.id == 16 %}
-            <div class="col-lg-3 ">
-              <a href="{% url 'main:prod_by_cat' i.id %}">
-                <div class="card " style="width: 100%; border:0px;">
-                    <img src="{{ i.image.url }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">{{i.desc}}</p>
-                    </div>
-                  </div>
-                </a>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-
-
+<div class="container-fluid texthead   ">
+    <div  class="  mx-auto ">
+        <h2>Making Every Celebration Sweeter.</h2>
+        <p>#All designs are meaningful, just like your life.</p>
     </div>
-</div>
-
-
-<div class="container-fluid  px-0 d-flex" style="width: 100vw; ; position:relative;" >
+        
     
-        <img style="width: 100%; filter: brightness(50%);"  src="{% static 'image/uliana-kopanytsia-ySxSlqeC0YM-unsplash.jpg' %}" alt="">
-  <div class="" style="position: absolute;top:19%; left:10%; "  >
-    <h1 style="font-size:100px;color:white;"  >NEW </h1>
-    <h1 style="font-size:70px;color:white;"   >RECIPIES NOW</h1>
-    <H1  style="font-size:50px;color:white;"  >AVAILABLE</H1>
-    <p style="color:white;">This red berry chocolate entremet is a delicay and a feast for both the eyes and the taste buds.</p>
-    <p style="color:white;">Layers of chocolate sponge cake, red berry marmalade and chocolate mousse are covered to perfection in a mirror glaze and decorated simply</p>
-  </div>
-</div>
-
-<div class="container-fluid d-flex justify-content-center  my-3 py-3" style="width: 100%;">
+    </div>
 
 
-    <div style="width: 90%; background-color:rgb(255, 255, 255);" id="carouselExampleInterval" class="carousel slide p-2" data-bs-ride="carousel">
-        <div  class="carousel-inner  ">
-          <div class="carousel-item active" data-bs-interval="3000">
-            <img src="{% static 'image/desk_airtel_25may.webp' %}" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="3000">
-            <img src="{% static 'image/mobikwik_desk_07dec.webp' %}" class="d-block w-100" alt="...">
-          </div>
-         
+    <div class="container-fluid rosead " >
+        <div class="mx-auto   my-3 p-2 roseadone "  >
+            <div class="row mt-3 m-2 ">
+                <div class="col-lg-6 col-sm-12 mt-2 ">
+                   
+                    <img style="width: 100%;" src="{% static 'image/SBB-Hero_Desk_Rose.webp' %}" alt="">
+                </div>
+                <div class="col-lg-6 col-sm-12 mt-2 ">
+                  
+                    <img style="width: 100%;" src="{% static 'image/SBB-Hero_Desk_Plants.webp' %}" alt="">
+                </div>
+            </div>
+    
+            <div class="row roseadrowt mt-3 m-2  ">
+              {% for i in subcategory %}
+              {% if  i.id == 24 %}
+                <div class="roseadrowtc col-lg-3 col-sm-6 ">
+                  <a href="{% url 'main:prod_by_cat' i.id %}">
+                    <div class="card " style="width: 100%; border:0px;">
+                        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">{{i.desc}}</p>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% for i in subcategory %}
+              {% if  i.id == 19 %}
+                <div class=" roseadrowtc col-lg-3 col-sm-6">
+                  <a href="{% url 'main:prod_by_cat' i.id %}">
+                    <div class="card " style="width: 100%; border:0px;">
+                        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">{{i.desc}}</p>
+                        </div>
+                      </div>
+                  </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+                {% for i in subcategory %}
+                {% if  i.id == 14 %}
+                  <div class="roseadrowtc col-lg-3 col-sm-6">
+                    <a href="{% url 'main:prod_by_cat' i.id %}">
+                      <div class="card " style="width: 100%; border:0px;">
+                          <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <p class="card-text">{{i.desc}}</p>
+                          </div>
+                        </div>
+                      </a>
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+              {% for i in subcategory %}
+              {% if  i.id == 16 %}
+                <div class="roseadrowtc col-lg-3 col-sm-6">
+                  <a href="{% url 'main:prod_by_cat' i.id %}">
+                    <div class="card " style="width: 100%; border:0px;">
+                        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">{{i.desc}}</p>
+                        </div>
+                      </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+    
+    
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+    </div>
+
+    <div class="container-fluid cakeimg  px-0 d-flex" style="" >
+        {% for i in ads %}
+        {% if i.id == 2 %}
+            <img style=""  src="{{i.banner.url}}" alt="">
+      <div class="cakeimgdiv" style=" "  >
+        <h1 class="cakeimgh1o" style=""  >NEW </h1>
+        <h1 class="cakeimgh1t" style=""   >RECIPIES NOW</h1>
+        <h1 class="cakeimgh1th" style=""  >AVAILABLE</h1>
+        <p class="cakeimgpo" style="">This red berry chocolate entremet is a delicay and a feast for both the eyes and the taste buds.</p>
+        <p class="cakeimgpt" style="">Layers of chocolate sponge cake, red berry marmalade and chocolate mousse are covered to perfection in a mirror glaze and decorated simply</p>
       </div>
+      {% endif %}
+      {% endfor %}
+    </div>
 
-</div>
+    <div class="container-fluid d-flex justify-content-center  my-3 py-3" style="width: 100%;">
 
 
-<div class="container-fluid p-0" style="width: 100%;">
-    <div class="mx-auto p-1 my-4" style="width:80vw;  background-color: white;">
-        <div class="row  mt-3 mx-auto ">
+        <div style="width: 90%; background-color:rgb(255, 255, 255);" id="carouselExampleInterval" class="carousel slide p-2" data-bs-ride="carousel">
+            <div  class="carousel-inner  ">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img src="{% static 'image/desk_airtel_25may.webp' %}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="{% static 'image/mobikwik_desk_07dec.webp' %}" class="d-block w-100" alt="...">
+              </div>
+             
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    
+    </div>
+
+    
+<div class="container-fluid lcategr p-0" >
+    <div class="lcategrd mx-auto p-1 my-4" style="">
+        <div class="lrow   mt-3 mx-auto ">
 
           {% for i in category %}
-            <div class="col-lg-2  mx-auto" style="width: 18%;">
-                <div class="card " style="width: 100%; border:0px;">
+            <div class="lrowcard  mx-auto" style="">
+              <a href="{% url 'main:prod_by_mcat' i.id %}">
+                <div class="card " style="">
                     <img src="{{i.image_3.url}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p style="font-size: 15px;" class="card-text">{{i.desc}}</p>
+                      <p style="" class="card-text">{{i.desc}}</p>
                     </div>
                   </div>
+                </a>
             </div>
             {% endfor %}
 
@@ -217,22 +219,17 @@
 
     </div>
 </div>
-
-
-
-
- 
-
-
-
-<div class="container-fluid  px-0 d-flex " style="width: 100%;position:relative ; " >
-    
-        <img style="width: 100%;"  src="{% static 'image/heather-barnes-hLOLcUwR0Y4-unsplash.jpg' %}" alt="">
-        <div class="" style="position: absolute;top:40%; left:28%; color:aliceblue;text-shadow: 2px 2px 14px #020000; "  >
-           
-                <h1>The guests in the party gone unnerved,</h1>
-                <h1>when vanilla strawberry cake is served!</h1> 
-        </div>
-</div>
-
+<div class="container-fluid limgl px-0 d-flex " style=" " >
+    {% for i in ads %}
+    {% if i.id == 2 %}
+      
+          <img style="width: 100%;"  src="{{i.banner_2.url}}" alt="">
+          <div class="limgld" style=""  >
+             
+                  <h1>The guests in the party gone unnerved,</h1>
+                  <h1>when vanilla strawberry cake is served!</h1> 
+          </div>
+          {% endif %}
+          {% endfor %}
+  </div>
 {% endblock %}

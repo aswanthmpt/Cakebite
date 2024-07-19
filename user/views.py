@@ -25,21 +25,24 @@ def signin(req):
             messages.info(req,'password doesnot match')
             return redirect('user:signin')
     return render(req,'signin.html')
-def login(req):
+def login_u(req):
     if req.method=='POST':
         username=req.POST.get('username','')
         password=req.POST.get('password','')
         user=auth.authenticate(username=username,password=password)
         if user is not None:
+            
             auth.login(req,user)
+           
             req.session['user']=str(user)
+            
             return redirect('main:home')
         else:
             messages.info(req,'Inavalid Details')
             return redirect('user:login')
     
     return render(req,'login.html')
-def logout(req):
+def logout_u(req):
     auth.logout(req)
     req.session.flush()
     return redirect('main:home')
