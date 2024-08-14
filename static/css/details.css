@@ -70,7 +70,10 @@
     will-change: transform,opacity;
     /* z-index: 0; */
   }
-
+.button-17 a{
+    text-decoration: none;
+    color: black;
+}
 
 @media screen and (max-width: 480px) {
 

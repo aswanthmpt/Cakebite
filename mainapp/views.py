@@ -73,5 +73,5 @@ def product(req,id=None,):
 
 def details(req,id):
     details=Product.objects.get(id=id)
-    
-    return render(req,'details.html',{"details":details})
+    product=Product.objects.filter(category=details.category)
+    return render(req,'details.html',{"details":details,"product":product})

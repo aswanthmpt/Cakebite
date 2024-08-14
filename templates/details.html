@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="container-fluid detailsc" style="">
-    <div class=" detailscd mx-auto  mt-3" style="">
+    <div class="  detailscd mx-auto  mt-3" style="">
         <div class="drow" >
             <div class="drowc" style="">
               <div class=" mt-2  imgdiv ">
@@ -176,6 +176,26 @@
 
             </div>
         </div>
+        <div class="row  mt-3 m-2 justify-content-center  ">
+          <div class="more  text-center">
+            <h3 class="mx-auto">More like this</h3>
+
+          </div>
+          {% for i in product %}
+          <div class="col-lg-3 col-md-3 col-sm-4">
+            <a style="text-decoration: none;color:black;" href="{% url 'main:details' i.id %}">
+              <div class="card mt-3" style="width: 100%; border:0px; ">
+                  <img src="{{i.image.url}}" class="card-img-top" alt="..." style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" >
+                  <div class="card-body">
+                    <p class="card-text">{{i.name}}</p>
+                    <p class="card-text">{{i.price}}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
     </div>
 </div>
+
 {% endblock %}

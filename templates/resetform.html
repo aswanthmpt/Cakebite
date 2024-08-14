@@ -21,36 +21,27 @@
 </head>
 
 <body>
-  {% include 'nav.html' %}
+    {% include 'nav.html' %}
   <div class="container-fluid loginone p-0 pt-5 " style="">
     <!-- <img style="width: 100%; height:80vh;filter: brightness(100%);" src="{% static 'image/cupcakes-with-candy-fillings-small-donuts-marble-background-high-quality-photo (1).jpg' %}" alt=""> -->
     <div class="  logino mt-5 " >
       <div class="row logrow">
-        <div class="p-0 col-lg-6 col-md-6 col-sm-6 fcol" style="text-align: center;">
+        <div class="p-0 col-lg-12 col-md-6 col-sm-6 fcol" style="text-align: center;">
 
           <form class="form-horizontal mt-5" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <h2>Login</h2>
-            <div class="social-container my-3 d-flex justify-content-center">
-              <a href="#" class="social me-3"><i style=" color:rgb(19, 39, 255); text-shadow: 2px 2px 14px #848383;"
-                  class="fa fa-facebook fa-2x"></i></a>
-              <a href="#" class="social me-3"><i style="color:rgb(15, 150, 246); text-shadow: 2px 2px 14px #8b8a8a;"
-                  class="fab fa fa-twitter fa-2x"></i></a>
-              <a href="#" class="social"><i style="color:rgb(0, 0, 0); text-shadow: 2px 2px 14px #6b6b6b;"
-                  class="fa fa-google fa-2x"></i></a>
+            <h5>Reset your  password</h5>
+           
+            <div class="form-group my-3 px-5 ">
+              <input required type="password" name="password" class="form-control" placeholder=password">
             </div>
             <div class="form-group my-3 px-5 ">
-              <input required type="text" name="username" class="form-control" placeholder="username">
+              <input required type="password" name="cpassword" class="form-control" placeholder="cpassword">
             </div>
 
-            <div class="form-group my-3 px-5">
-              <input required type="password" name="password" class="form-control" placeholder="password">
-            </div>
+           
 
-            <h6>haven't an account <a style="color:rgb(0, 26, 255); text-shadow: 2px 2px 14px #ffffff;"
-                href="{% url 'user:signin' %}">Signin</a></h6>
-            <h6> <a style="color:rgb(0, 26, 255); text-shadow: 2px 2px 14px #ffffff;"
-                href="{% url 'user:forpass' %}">forgot password</a></h6>
+        
             {% for i in messages %}
             <h5 style="color: red;">{{i}}</h5>
             {% endfor %}
@@ -64,25 +55,7 @@
 
 
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner ">
-              <div class="carousel-item active carras" data-bs-interval="6000">
-                <img style="" src="{% static 'image/pexels-jess-bailey-designs-913136.jpg' %}"
-                  class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item carras" data-bs-interval="6000">
-                <img style="" src="{% static 'image/pexels-lil-artsy-1793037.jpg' %}"
-                  class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item carras" data-bs-interval="6000">
-                <img style="" src="{% static 'image/pexels-dmitry-zvolskiy-1721934.jpg' %}"
-                  class="d-block w-100" alt="...">
-              </div>
-            </div>
-          </div>
-
-        </div>
+      
       </div>
     </div>
 
