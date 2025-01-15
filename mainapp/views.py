@@ -56,7 +56,7 @@ def product(req,id=None,):
         # print(sub)
         # pro=Product.objects.filter()
         
-    paginator=Paginator(product,16)
+    paginator=Paginator(product,12)
     
     try:
         page=int(req.GET.get('page'))

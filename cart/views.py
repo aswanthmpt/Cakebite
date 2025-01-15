@@ -7,6 +7,8 @@ from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 def addcart(req,id):
     user=req.session['user']
+    if not user:
+      return redirect('user:login')
     product=Product.objects.get(id=id)
     try:
         cartitem=Cart.objects.get(user=user,products=product)
